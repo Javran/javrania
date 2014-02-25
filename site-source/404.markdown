@@ -1,0 +1,8 @@
+---
+title: Exception: Prelude.undefined
+---
+ 
+Oops, I don't have the page you are looking for.
+
+The only page I know for sure is
+[my home page](/).
