@@ -1,4 +1,4 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings, ScopedTypeVariables #-}
 import           Hakyll
 import           Data.Monoid ((<>), mconcat)
 import           Text.Pandoc
@@ -44,6 +44,7 @@ myRules = do
         route $ setExtension "html"
         compile $ pandocCompilerX
             >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= relativizeUrls
 
@@ -98,6 +99,23 @@ myRules = do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
+    createFeed "atom.xml" renderAtom
+    createFeed "rss.xml"  renderRss
+
+createFeed :: Identifier
+            -> (  FeedConfiguration
+               -> Context String
+               -> [Item String]
+               -> Compiler (Item String))
+            -> Rules ()
+createFeed path renderXXX = create [ path ] $ do
+    route idRoute
+    compile $ do
+        let feedCtx = bodyField "description" <> defaultContext
+
+        posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*" "content"
+        renderXXX myFeedConfig feedCtx posts
+
 myConfig :: Configuration
 myConfig = defaultConfiguration
     { destinationDirectory = "site-generated"
@@ -120,3 +138,12 @@ pandocCompilerX = pandocCompilerWith readerOpt writerOpt
                       { writerHighlight  = True
                       , writerHighlightStyle = pygments
                       }
+
+myFeedConfig :: FeedConfiguration
+myFeedConfig = FeedConfiguration
+    { feedTitle       = "Javrania"
+    , feedDescription = "Javran's blog"
+    , feedAuthorName  = "Javran Cheng"
+    , feedAuthorEmail = "Javran.c+fromBlogFeed@gmail.com"
+    , feedRoot        = "http://javran.github.io/"
+    }

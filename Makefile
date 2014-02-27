@@ -1,4 +1,6 @@
-.PHONY: clean-site clean-bin clean
+.PHONY: clean-site clean-bin clean all
+
+all: javrania site
 
 javrania: ./javrania.hs
 	ghc $<
