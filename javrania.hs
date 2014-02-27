@@ -33,7 +33,7 @@ myRules = do
     -- about page
     match (fromList ["about.markdown"]) $ do
         route   $ setExtension "html"
-        compile $ pandocCompilerX
+        compile $ pandocCompilerAbout
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -137,6 +137,18 @@ pandocCompilerX = pandocCompilerWith readerOpt writerOpt
     where readerOpt = defaultHakyllReaderOptions
           writerOpt = defaultHakyllWriterOptions
                       { writerHighlight  = True
+                      , writerHighlightStyle = pygments
+                      }
+
+pandocCompilerAbout :: Compiler (Item String)
+pandocCompilerAbout = pandocCompilerWith readerOpt writerOpt
+    where readerOpt = defaultHakyllReaderOptions
+          writerOpt = defaultHakyllWriterOptions
+                      { writerHighlight  = True
+                      , writerTableOfContents = True
+                      , writerStandalone = True
+                      , writerTemplate = unlines [ "$toc$"
+                                                 , "$body$" ]
                       , writerHighlightStyle = pygments
                       }
 
