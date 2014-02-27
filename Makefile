@@ -4,6 +4,7 @@ all: javrania site
 
 javrania: ./javrania.hs
 	ghc $<
+	./javrania clean
 
 site: javrania
 	./javrania build

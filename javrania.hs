@@ -43,9 +43,10 @@ myRules = do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompilerX
-            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
+            >>= loadAndApplyTemplate "templates/post.html"       (postCtxWithTags tags)
             >>= saveSnapshot "content"
-            >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
+            >>= loadAndApplyTemplate "templates/post-frame.html" (postCtxWithTags tags)
+            >>= loadAndApplyTemplate "templates/default.html"    (postCtxWithTags tags)
             >>= relativizeUrls
 
     create ["archive.html"] $ do
