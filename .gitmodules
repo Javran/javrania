@@ -1,0 +1,3 @@
+[submodule "javran.github.io"]
+	path = javran.github.io
+	url = git@github.com:Javran/javran.github.io.git

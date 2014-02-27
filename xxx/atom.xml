@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Javrania</title>
+    <link href="http://javran.github.io//atom.xml" rel="self" />
+    <link href="http://javran.github.io/" />
+    <id>http://javran.github.io//atom.xml</id>
+    <author>
+        <name>Javran Cheng</name>
+        <email>Javran.c+fromBlogFeed@gmail.com</email>
+    </author>
+    <updated>2014-02-25T00:00:00Z</updated>
+    <entry>
+    <title>Yet another beginning</title>
+    <link href="http://javran.github.io//posts/2014-02-25-yet-another-beginning.html" />
+    <id>http://javran.github.io//posts/2014-02-25-yet-another-beginning.html</id>
+    <published>2014-02-25T00:00:00Z</published>
+    <updated>2014-02-25T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2014-02-25 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/thought.html">thought</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>I think it's not surprising if I say I've made my decision(again) to restart writing blogs and keeping track of my personal pages.</p>
+<p>This time I switch from <a href="https://github.com/jekyll/jekyll">jekyll</a> to <a href="http://jaspervdj.be/hakyll/">hakyll</a>. It doesn't mean jekyll is not a good choice, this is just because I feel like becoming a Haskell fans and of course I'd like to get more involved with Haskell stuffs. Hakyll, in this sense, fits me better.</p>
+<p>These days I did some sort of work to apply some themes to make my hakyll site looks better. And the final choice I come up with is to use <a href="http://getbootstrap.com/">bootstrap</a> for a basic framework, and use <a href="http://www.lavishbootstrap.com/">lavish</a> to make my own theme.</p>
+<p>After I felt good about how the website looks, I moved my past posts from jekyll to hakyll, which is actually quite easy and just quites few lines of changes. It's great that Hakyll uses <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> , which is another fascinating project written in Haskell, to deal with HTML file generating. Pandoc just makes the data migration smooth and in addition makes more source file formats available (I think this is a big win comparing with jekyll).</p>
+<p>And then some other stuffs like tags were implemented last weekends, but unfortunately when I start searching for tutorials about how can I enable tags in Hakyll, there is not much documents that I can refer to. Hakyll does have some documents lying in Hackage, but I believe that these documents are incomplete and insufficient to work out all the details.</p>
+<p>The most helpful thing provided by Hakyll's website finally turns out to be <a href="http://jaspervdj.be/hakyll/examples.html">these example websites with source codes</a>. I figured out how to add and organize tags by looking at some source codes from these websites.</p>
+<p>So the next thing I can think about, is to write a tutorial about how I add tags to my own blog. I believe this will familiarize myself with Hakyll, and make more features available to Hakyll newbies like me.</p>
+<p>However, you should never expect that tutorial coming out quickly, as things are getting me really busy these days.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Keep thinking</title>
+    <link href="http://javran.github.io//posts/2013-04-19-keep-thinking.html" />
+    <id>http://javran.github.io//posts/2013-04-19-keep-thinking.html</id>
+    <published>2013-04-19T00:00:00Z</published>
+    <updated>2013-04-19T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2013-04-19 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/thought.html">thought</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>Many things have changed since last update. It might be a good pretext that I'm doing my internship so have no time to get things updated here.</p>
+<p>Anyway, At least I'm still trying to make me active by commit codes to github.com :)</p>
+<h1 id="what-ive-done-for-these-days">What I've done for these days?</h1>
+<p>Working on my repo: <a href="https://github.com/Javran/Thinking-dumps">thinking-dumps</a>, I think it's a great idea to force myself keep doing things that can extend my knowledge.</p>
+<p>I've finished reading on 2 books:</p>
+<ul>
+<li><p>Seven Languages in Seven Weeks</p>
+<p>Great book that show me 7 different programming languages.</p></li>
+<li><p>Teach Yourself Scheme in Fixnum Days</p>
+<p>I'd like to start reading SICP, and I think some basic knowledge about Scheme might be helpful.</p></li>
+</ul>
+<h1 id="what-im-doing">What I'm doing?</h1>
+<ul>
+<li><p>SICP</p>
+<p>Now I'm working on <a href="http://mitpress.mit.edu/sicp/">SICP</a>. I felt excited when I found the last task was to implement a complier of Scheme. And it will be a great work if I can complete all the exercises in this book.</p></li>
+<li><p>F Sharp</p>
+<p>Just want to learn another language. And since F# is a member of .Net language, I think I can use it as well as take advantage of other .Net languages (mainly C#) in my future time. BTW: LINQ is great, which brings some concepts from functional programming into .Net's world :) The book I'm currently working with is “Programming F#”. You can see it is a branch in my repo. I'd merge it into master branch as soon as I've finish exploring this book.</p></li>
+<li><p>Internship</p>
+<p>Of course I need to do my real job. It is a good job that I have interest in, despite sometimes I felt exhausted or disappointed.</p></li>
+</ul>
+<h1 id="what-im-going-to-do">What I'm going to do?</h1>
+<ul>
+<li><p>Programming with Haskell</p>
+<p>Haskell is my favorite! I'll like to read Real World Haskell, and come up with some applications.</p></li>
+<li>writing a sudoku solver</li>
+<li>writing a sokoban game with GUI</li>
+<li>exploring xmonad</li>
+<li><p>a snake game solver (by finding Eulerian paths) (try to use ncurse bindings)</p></li>
+</ul>
+<p>I'll try to achieve things listed above, but I have no idea about when I'll achieve all of them.</p>
+<p>All in all, I'd like to keep thinking and be ready to share everything I have explored.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Android development without eclipse</title>
+    <link href="http://javran.github.io//posts/2012-10-29-android-development-without-eclipse.html" />
+    <id>http://javran.github.io//posts/2012-10-29-android-development-without-eclipse.html</id>
+    <published>2012-10-29T00:00:00Z</published>
+    <updated>2012-10-29T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2012-10-29 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/android.html">android</a>, <a href="/tags/vim.html">vim</a>, <a href="/tags/eclipse.html">eclipse</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>Of course it was really handy using eclipse for android development, however recently I don't know what the hell eclipse is doing background, it does not respond frequently when I am editing java codes and the only thing I could do is to kill it.</p>
+<p>Maybe it is because I've added a 1G memory? And everything keep working except eclipse? Or maybe it is because I've got too much plugin? But all I have is the plugins installed following the ADT installation instructions.</p>
+<p>Get rid of eclipse! At least I don't want to get me mad again.</p>
+<p>Then currently I might have found the way, by making use of vim and eclim, the latter runs eclipse headlessly.</p>
+<p>Just keep a memo for myself about how to develop android programs without eclipse.</p>
+<p>This post will keep merging things I think necessary for me to develop android apps.</p>
+<p>Since I'm not familiar with vim though I've used it for a long time, I might keep some basic knowledge about vim here.</p>
+<h1 id="tools">Tools</h1>
+<ul>
+<li>vim</li>
+<li><a href="http://eclim.org/install.html">Eclim</a></li>
+</ul>
+<h1 id="how-to-xxx">How to XXX</h1>
+<h2 id="connect-with-eclim">connect with Eclim</h2>
+<p>Eclim works as a daemon, go to your eclipse root directory, run <code>./eclimd start</code> so that eclim will be started as daemon.</p>
+<p>to shutdown the daemon, use command <code>:ShutdownEclim</code> or run <code>$ECLIPSE_HOME/eclim -command shutdown</code></p>
+<p>Open a vim, use command <code>:PingEclim</code>, if you can see the version of eclim and eclipse, the installation of eclim is done</p>
+<h2 id="create-android-project">create android project</h2>
+<p>open vim, create project:</p>
+<p><code>:ProjectCreate {project_path} -n android</code></p>
+<p>and <code>.project</code> as well as <code>.classpath</code> should have been generated.</p>
+<h2 id="project-commands">project commands</h2>
+<p><code>:ProjectList</code> prints a list of all projects available in eclipse.</p>
+<p><code>:ProjectTree {project name}</code> show the project root directory and its structure.</p>
+<p><code>:ProjectDelete {project name}</code> removes project</p>
+<h2 id="build-install-project">build &amp; install project</h2>
+<p>run <code>:Ant debug install</code> in the project's root directory, and the built .apk file is located at <code>./bin</code></p>
+<p>note that <code>ant</code> requires <code>build.xml</code> in the project's root directory, if you cannot find one, use <code>android update project -p {project path} --n {project name}</code> to generate one.</p>
+<h2 id="code-completion">code completion</h2>
+<p><code>Ctrl+x Ctrl+u</code> to open suggestions <code>Ctrl+p</code> move to the next</p>
+<h2 id="command-mapping">command mapping</h2>
+<p>edit <code>.vimrc</code></p>
+<pre class="vim"><code>set &lt;m-i&gt;=^[i
+set &lt;m-o&gt;=^[o
+set &lt;m-c&gt;=^[c
+
+&quot;alt+i for auto import neccessary packages
+&quot;alt+o for open project
+nmap &lt;m-i&gt; :JavaImportOrganize&lt;CR&gt;
+nmap &lt;m-o&gt; :ProjectTree&lt;CR&gt;
+nmap &lt;m-c&gt; :JavaCorrect&lt;CR&gt;</code></pre>
+<p>note: <code>^[i</code> is inputted by <code>&lt;ctrl+v&gt;&lt;alt+i&gt;</code> and <code>^[o</code> is inputted by <code>&lt;ctrl+v&gt;&lt;alt+o&gt;</code>, etc.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Game of thinking</title>
+    <link href="http://javran.github.io//posts/2012-10-19-game-of-thinking.html" />
+    <id>http://javran.github.io//posts/2012-10-19-game-of-thinking.html</id>
+    <published>2012-10-19T00:00:00Z</published>
+    <updated>2012-10-19T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2012-10-19 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/thought.html">thought</a>, <a href="/tags/fun.html">fun</a>, <a href="/tags/philosophy.html">philosophy</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>Last night before I went to sleep, I raised an interesting question at my twitter:</p>
+<blockquote>
+<p>Given that the end of this world do exist and when this moment comes, god gives you an option that he can transfer your awareness to another parallel world which has not triggerred the condition of the end, but in return you would not have any means to intervene with that parallel world. Will you accept?</p>
+</blockquote>
+<p>I argee that by doing this transfer, you are undetectable by anything in that world, so it makes no sense from the other world's people's point of view. Some friends mention me it just like watching a movie, you can do nothing but watching, is that being an observer of another fork of world interesting? It is hard to figure out :)</p>
+<p>Another suggestion from one of my friends is that “if you can suicide mentally, there is no hurt to go to another world, you can terminate yourself when you feel boring.” It is really a good idea but I have more interest in “to suicide mentally”. We all know that physical matter can neither be created nor destroyed, is that hold true in our mental world? If that is true, then a pure soul might not be capable of performing an “awareness suicide”.</p>
+<p>Furthermore, for a long time I believe that “death” means a disconnection between the material world and the immaterial world, by transfering my soul to another world I have already disconnected with the world that I come from, am I died? do I exist?</p>
+<p>Not long after starting this discussion, I found more interesting things:</p>
+<blockquote>
+<p>It is possible that at the moment that I accept/refuse the opportunity from god, the world forks again and one of my soul transfers to another parallel world. The “another parallel world” might exactly be the world that we live in, and it is interesting because there will be various observers from the already-termintated world in our world, which cannot be proved or detected.</p>
+</blockquote>
+<p>Just allow me to take a step further:</p>
+<blockquote>
+<p>Can these observers see each other? Anyway it is impossible for them to intervene with the world they observing. What will happen if they can interact with each other?</p>
+</blockquote>
+<p>p.s.</p>
+<ul>
+<li>I believe I have to practice a lot before I can write intelligible and prolificent English. If there is anything unclear in my post, please feel free to inform me.</li>
+<li>Any ideas about the problems mentioned in this post are welcomed of course :)</li>
+</ul>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Made a favicon</title>
+    <link href="http://javran.github.io//posts/2012-10-14-made-a-favicon.html" />
+    <id>http://javran.github.io//posts/2012-10-14-made-a-favicon.html</id>
+    <published>2012-10-14T00:00:00Z</published>
+    <updated>2012-10-14T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2012-10-14 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/gimp.html">gimp</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>Today I attempted to make a favicon for my blog :)</p>
+<p>Actually I've designed a logo which is centrosymmetric and contains many curves. Sadly, drawing symmetric curves is really a big challenge for newbies like me, I've tried draw some paths and do some filp and rotation to make it looks symmetric, but the result does not seem very good.</p>
+<p>After suffering a lot drawing curves, I decide to change my design so that it will only contain straight lines. By taking advantage of the conversion between paths and selections in gimp, I was able to create this picture. In addition I showed grids when drawing paths so I can draw more precisely.</p>
+<p><img src="/images/favicon-export-01.png" alt="My blog's facicon" height="128" weight="128" /></p>
+<p>Of course, I'd like to talk about what my favicon means. Though looks like “N”, it combines “Jav”, short for my English name, and a greek letter “lambda” which is highlighted by cyan merely because I thought it was cool.</p>
+<p>Now there are some suggestions about making a favicon for newbies like me :)</p>
+<ul>
+<li><p>Google is your friend. Search to find concepts about “path”, “selection” in gimp, and their basic operations like “flip” and “rotate”.</p></li>
+<li><p>Try to use straight lines instead of curve ones in your designs if you find it difficult to handle them properly.</p></li>
+<li><p>Make use of “alignment” and “grid”, rather than taking pain to arrage things manually.</p></li>
+</ul>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Another beginning</title>
+    <link href="http://javran.github.io//posts/2012-10-13-another-beginning.html" />
+    <id>http://javran.github.io//posts/2012-10-13-another-beginning.html</id>
+    <published>2012-10-13T00:00:00Z</published>
+    <updated>2012-10-13T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<span class="blog-date">
+    2012-10-13 - 
+</span>
+<span class="blog-tag">
+    
+        [ 
+        <a href="/tags/thought.html">thought</a>
+        ]
+    
+</span>
+<br />
+<br />
+<div class="blog-main">
+<p>Though I have had several blogs previously, there are outdated because of my laziness (sorry about that). And so I decide to create this blog thanks to github and <a href="http://jekyllbootstrap.com/">Jekyll-Bootstrap</a>.</p>
+<p>Actually reasons are unnecessary for my intention of creating this blog but leaving others unreclaimed, if any, just dumping stuffs that come into my mind and a desire of using English purely(for I'm not a native speaker of English).</p>
+<p>Let it be another beginning of my voyage of maintaining blogs. And I hope this time I'm capable of keeping it up-to-date.</p>
+</div>
+]]></summary>
+</entry>
+
+</feed>

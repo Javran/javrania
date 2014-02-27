@@ -16,3 +16,6 @@ clean-bin:
 	rm -f ./javrania{,.hi,.o}
 
 clean: clean-site clean-bin
+
+deploy:
+	/bin/bash ./do-deploy.sh

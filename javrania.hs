@@ -122,6 +122,7 @@ myConfig = defaultConfiguration
     { destinationDirectory = "site-generated"
     , providerDirectory = "site-source"
     , previewPort = 18989
+    , deployCommand = "/bin/bash ./do-deploy.sh"
     }
 
 postCtxWithTags :: Tags -> Context String
