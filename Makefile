@@ -17,5 +17,5 @@ clean-bin:
 
 clean: clean-site clean-bin
 
-deploy:
+deploy: site
 	/bin/bash ./do-deploy.sh
