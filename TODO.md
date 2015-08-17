@@ -6,3 +6,4 @@
         * commit submodule, use datetime as log message
 * README.md
 * index.md
+* rebuild `javraina` when necessary.

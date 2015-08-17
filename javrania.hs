@@ -1,38 +1,37 @@
 {-# LANGUAGE OverloadedStrings, ScopedTypeVariables #-}
 import           Hakyll
-import           Data.Monoid ((<>), mconcat)
+import           Data.Monoid
 import           Text.Pandoc
 import           Text.Highlighting.Kate.Styles
+
+-- TODO: list all tags to a new page?
 
 main :: IO ()
 main = hakyllWith myConfig myRules
 
+patEverything, patNothing :: Pattern
+patEverything = mempty
+patNothing = complement patEverything
+
 myRules :: Rules ()
 myRules = do
+    let directCopyPatterns :: [Pattern]
+        directCopyPatterns =
+            [ "favicon.ico"
+            , "assets/*"
+            , "images/*"
+            , "js/*"
+            , "fonts/*"
+            ]
+        directCopyPat = foldr (.||.) patNothing directCopyPatterns
     -- copy files that does not need to convert
-    match "favicon.ico" $ do
+    match directCopyPat $ do
         route idRoute
-        compile copyFileCompiler
-
-    match "assets/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "images/*" $ do
-        route   idRoute
         compile copyFileCompiler
 
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
-
-    match "js/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "fonts/*" $ do
-        route   idRoute
-        compile copyFileCompiler
 
     -- about page
     match (fromList ["about.markdown"]) $ do
