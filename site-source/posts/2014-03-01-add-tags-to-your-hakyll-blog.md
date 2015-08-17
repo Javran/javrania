@@ -112,7 +112,7 @@ Insert the following code in front of it:
 tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 ```
 
-The code region above says: find all tags by searching the metadate of
+The code region above says: find all tags by searching the metadata of
 posts found by pattern `posts/*`,
 and the corresponding path for each tag will be of form `tags/*.html`.
 (e.g. for tag `foo`, you can generate a list of all posts that contains tag `foo`
