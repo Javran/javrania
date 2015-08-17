@@ -1,0 +1,1 @@
+cabal install hakyll --flags="previewServer watchServer checkExternal" --reinstall
