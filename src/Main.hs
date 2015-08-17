@@ -1,8 +1,10 @@
 {-# LANGUAGE OverloadedStrings, ScopedTypeVariables #-}
-import           Hakyll
-import           Data.Monoid
-import           Text.Pandoc
-import           Text.Highlighting.Kate.Styles
+module Main where
+
+import Hakyll
+import Data.Monoid
+import Text.Pandoc
+import Text.Highlighting.Kate.Styles
 
 -- TODO: list all tags to a new page?
 
