@@ -7,6 +7,7 @@ import Text.Pandoc
 import Text.Highlighting.Kate.Styles
 
 -- TODO: list all tags to a new page?
+-- TODO: store static files under some specific directory
 
 main :: IO ()
 main = hakyllWith myConfig myRules
@@ -34,6 +35,11 @@ myRules = do
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
+
+    match "static-files/**" $ do
+        let removeLeading = drop (length ("static-files/" :: String))
+        route (customRoute (removeLeading . toFilePath))
+        compile copyFileCompiler
 
     -- about page
     match (fromList ["about.markdown"]) $ do
