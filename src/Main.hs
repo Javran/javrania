@@ -8,41 +8,27 @@ import Text.Highlighting.Kate.Styles
 
 -- TODO: list all tags to a new page?
 -- TODO: store static files under some specific directory
+-- TODO: document dir structure
 
 main :: IO ()
 main = hakyllWith myConfig myRules
 
-patEverything, patNothing :: Pattern
-patEverything = mempty
-patNothing = complement patEverything
-
 myRules :: Rules ()
 myRules = do
-    let directCopyPatterns :: [Pattern]
-        directCopyPatterns =
-            [ "favicon.ico"
-            , "assets/*"
-            , "images/*"
-            , "js/*"
-            , "fonts/*"
-            ]
-        directCopyPat = foldr (.||.) patNothing directCopyPatterns
-    -- copy files that does not need to convert
-    match directCopyPat $ do
-        route idRoute
-        compile copyFileCompiler
-
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
-
+    -- File stored in static-files are copied directly into dest directory
+    -- directory structures are preserved.
     match "static-files/**" $ do
         let removeLeading = drop (length ("static-files/" :: String))
         route (customRoute (removeLeading . toFilePath))
         compile copyFileCompiler
 
+    -- CSS files are compressed before being moved into dest directory
+    match "css/*" $ do
+        route idRoute
+        compile compressCssCompiler
+
     -- about page
-    match (fromList ["about.markdown"]) $ do
+    match "about.markdown" $ do
         route   $ setExtension "html"
         compile $ pandocCompilerAbout
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
