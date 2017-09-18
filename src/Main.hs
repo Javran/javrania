@@ -4,7 +4,8 @@ module Main where
 import Hakyll
 import Data.Monoid
 import Text.Pandoc
-import Text.Highlighting.Kate.Styles
+-- import Text.Highlighting.Kate.Styles
+import Skylighting.Styles
 
 -- TODO: list all tags to a new page?
 -- TODO: store static files under some specific directory
@@ -144,9 +145,7 @@ pandocCompilerAbout = pandocCompilerWith readerOpt writerOpt
           writerOpt = defaultHakyllWriterOptions
                       { writerHighlight  = True
                       , writerTableOfContents = True
-                      , writerStandalone = True
-                      , writerTemplate = unlines [ "$toc$"
-                                                 , "$body$" ]
+                      , writerTemplate = pure $ unlines ["$toc$" , "$body$"]
                       , writerHighlightStyle = pygments
                       }
 
