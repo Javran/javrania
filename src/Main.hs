@@ -76,11 +76,11 @@ myRules = do
 
     match "templates/*" $ compile templateCompiler
 
-    tagsRules tags $ \tag pattern -> do
+    tagsRules tags $ \tag pat -> do
         let title = "Posts tagged \"" ++ tag ++ "\""
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll pattern
+            posts <- recentFirst =<< loadAll pat
             let ctx =
                     constField "title" title
                  <> listField "posts" (postCtxWithTags tags) (return posts)
