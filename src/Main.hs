@@ -29,7 +29,7 @@ myRules = do
         compile compressCssCompiler
 
     -- about page
-    match "about.markdown" $ do
+    match "about.md" $ do
         route   $ setExtension "html"
         compile $ pandocCompilerAbout
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -92,7 +92,7 @@ myRules = do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    match "404.markdown" $ do
+    match "404.md" $ do
         route $ setExtension "html"
         compile $ pandocCompilerX
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
