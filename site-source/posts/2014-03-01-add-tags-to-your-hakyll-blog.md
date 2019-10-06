@@ -200,7 +200,7 @@ I choose to place it right after the line `tags <- buildTags`:
         compile $ do
             posts <- recentFirst =<< loadAll pattern
             let ctx = constField "title" title
-                      `mappend` listField "posts" postCtx (return posts)
+                      `mappend` listField "posts" (postCtxWithTags tags) (return posts)
                       `mappend` defaultContext
 
             makeItem ""
