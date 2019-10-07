@@ -135,18 +135,15 @@ pandocCompilerX :: Compiler (Item String)
 pandocCompilerX = pandocCompilerWith readerOpt writerOpt
     where readerOpt = defaultHakyllReaderOptions
           writerOpt = defaultHakyllWriterOptions
-                      { writerHighlight  = True
-                      , writerHighlightStyle = pygments
-                      }
+                      { writerHighlightStyle = Just pygments }
 
 pandocCompilerAbout :: Compiler (Item String)
 pandocCompilerAbout = pandocCompilerWith readerOpt writerOpt
     where readerOpt = defaultHakyllReaderOptions
           writerOpt = defaultHakyllWriterOptions
-                      { writerHighlight  = True
-                      , writerTableOfContents = True
+                      { writerTableOfContents = True
                       , writerTemplate = pure $ unlines ["$toc$" , "$body$"]
-                      , writerHighlightStyle = pygments
+                      , writerHighlightStyle = Just pygments
                       }
 
 myFeedConfig :: FeedConfiguration
